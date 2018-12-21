@@ -121,6 +121,22 @@ add_action( 'widgets_init', 'faraton_com_ua_widgets_init' );
  */
 function faraton_com_ua_scripts() {
 	wp_enqueue_style( 'faraton-com-ua-style', get_stylesheet_uri() );
+// origin style faraton
+	wp_register_style( 'styles-css', get_template_directory_uri() . ( '/styles.css' ) );
+	wp_enqueue_style( 'styles-css' );
+
+	wp_register_style( 'styles-articles-css', get_template_directory_uri() . ( '/styles_articles_tpl.css"' ) );
+	wp_enqueue_style( 'styles-articles-css' );
+
+	wp_register_style( 'highslide-css', get_template_directory_uri() . ( '/highslide.min.css' ) );
+	wp_enqueue_style( 'highslide-css' );
+
+	wp_register_style( 'calendar-css', get_template_directory_uri() . ( '/calendar.css' ) );
+	wp_enqueue_style( 'calendar-css' );
+
+	wp_register_style( 'styles-bdr', get_template_directory_uri() . ( '/styles_bdr.scss.css' ) );
+	wp_enqueue_style( 'styles-bdr' );
+//end style
 
 	wp_enqueue_script( 'faraton-com-ua-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
 
@@ -129,6 +145,44 @@ function faraton_com_ua_scripts() {
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
+	//origin scripts faraton
+	wp_register_script( 'highslide-full', get_template_directory_uri() . ( '/highslide-full.packed.js' ));
+	wp_enqueue_script( 'highslide-full' );
+
+	wp_register_script( 'flowplayer-3', get_template_directory_uri() . ( '/flowplayer-3.2.9.min.js' ));
+	wp_enqueue_script( 'flowplayer-3' );
+
+	wp_register_script( 'ru-js', get_template_directory_uri() . ( '/ru.js' ));
+	wp_enqueue_script( 'ru-js' );
+
+	wp_register_script( 'cookie', get_template_directory_uri() . ( '/cookie.js' ));
+	wp_enqueue_script( 'cookie' );
+
+	wp_register_script( 'widgets-js', get_template_directory_uri() . ( '/widgets.js@v=8' ));
+	wp_enqueue_script( 'widgets-js' );
+
+	wp_register_script( 'calendar-packed-js', get_template_directory_uri() . ( '/calendar.packed.js' ));
+	wp_enqueue_script( 'calendar-packed-js' );
+
+	wp_register_script( 'html5-3', get_template_directory_uri() . ( '/html5-3.7.0.js' ));
+	wp_enqueue_script( 'html5-3' );
+
+	wp_register_script( 'jquery-1', get_template_directory_uri() . ( '/jquery-1.10.2.min.js'));
+	wp_enqueue_script( 'jquery-1' );
+
+	wp_register_script( 'map2-js', get_template_directory_uri() . ( '/map2.js' ));
+	wp_enqueue_script( 'map2-js' );
+
+	wp_register_script( 'link-top', get_template_directory_uri() . ( '/link_top.js' ));
+	wp_enqueue_script( 'link-top' );
+
+	wp_register_script( 'googleapis', '//maps.googleapis.com/maps/api/js?key=AIzaSyBj5qNusIPNEJ7T7bVTlmoXtAS4m7iNLcs' );
+	wp_enqueue_script( 'googleapis' );
+
+	wp_register_script( 'site-min', get_template_directory_uri() . ( '/site.min.js@1523354661' ));
+	wp_enqueue_script( 'site-min' );
+
+	
 }
 add_action( 'wp_enqueue_scripts', 'faraton_com_ua_scripts' );
 

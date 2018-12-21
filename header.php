@@ -16,30 +16,20 @@
 <meta name="keywords" content="Фаратон, лист, трубы, круг, металлопрокат, прокат металла, сталь, металл, полоса, нержавеющие отводы, уголок, шестигранник, арматура, фольга, катанка, металлоконструкции">
 <meta name="SKYPE_TOOLBAR" content="SKYPE_TOOLBAR_PARSER_COMPATIBLE" />
 <title>Фаратон - оптовая и розничная продажа металлопроката и металлоконструкций в Украине и Киеве.</title>
-<link href="styles.css" rel="stylesheet" type="text/css" />
 
-
-<link rel="stylesheet" href="styles_articles_tpl.css">
-<link rel='stylesheet' type='text/css' href='highslide.min.css'/>
 <!--[if IE 6]>
 <link rel='stylesheet' type='text/css' href='/shared/highslide-4.1.13/highslide-ie6.css'/>
 <![endif]-->
 <!--[if lte IE 7 ]>
 <link rel='stylesheet' type='text/css' href='/shared/highslide-4.1.13/style1_ie.css'/>
 <![endif]-->
-<script type='text/javascript' src='highslide-full.packed.js'></script>
+
 <script type='text/javascript'>
 hs.graphicsDir = './shared/highslide-4.1.13/graphics/';
 hs.outlineType = null;
 hs.showCredits = false;
 hs.lang={cssDirection:'ltr',loadingText:'Загрузка...',loadingTitle:'Кликните чтобы отменить',focusTitle:'Нажмите чтобы перенести вперёд',fullExpandTitle:'Увеличить',fullExpandText:'Полноэкранный',previousText:'Предыдущий',previousTitle:'Назад (стрелка влево)',nextText:'Далее',nextTitle:'Далее (стрелка вправо)',moveTitle:'Передвинуть',moveText:'Передвинуть',closeText:'Закрыть',closeTitle:'Закрыть (Esc)',resizeTitle:'Восстановить размер',playText:'Слайд-шоу',playTitle:'Слайд-шоу (пробел)',pauseText:'Пауза',pauseTitle:'Приостановить слайд-шоу (пробел)',number:'Изображение %1/%2',restoreTitle:'Нажмите чтобы посмотреть картинку, используйте мышь для перетаскивания. Используйте клавиши вперёд и назад'};</script>
-<script type='text/javascript' src='flowplayer-3.2.9.min.js'></script>
-<!-- 46b9544ffa2e5e73c3c971fe2ede35a5 -->
-<link rel='stylesheet' type='text/css' href='calendar.css' />
-<script type='text/javascript' src='ru.js'></script>
-<script type='text/javascript' src='cookie.js'></script>
-<script type='text/javascript' src='widgets.js@v=8'></script>
-<script type='text/javascript' src='calendar.packed.js'></script>
+
 
 <script type='text/javascript'>/*<![CDATA[*/
 widgets.addOnloadEvent(function() {
@@ -51,14 +41,7 @@ widgets.addOnloadEvent(function() {
 	}
 });
 /*]]>*/
-</script><script src="html5-3.7.0.js"></script>
-
-<script type="text/javascript" src="jquery-1.10.2.min.js"></script>
-			<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBj5qNusIPNEJ7T7bVTlmoXtAS4m7iNLcs"></script>
-
-<script src="map2.js"></script>
-
-<script src="link_top.js"></script>
+</script>
 
 <script type="text/javascript">
 
@@ -75,7 +58,7 @@ widgets.addOnloadEvent(function() {
 });
 </script>
 
-<link href="styles_bdr.scss.css" rel="stylesheet" type="text/css" />
+<?php wp_head(); ?>
 </head>
 
 <body>

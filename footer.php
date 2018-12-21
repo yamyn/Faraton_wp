@@ -51,19 +51,17 @@ document.write("<a href='http://www.liveinternet.ru/click' "+
 				d.getElementsByTagName("head")[0].appendChild(s);
 			})(document);
 			//--></script>
-			<!--/cms statistics-->
-<!--__INFO2018-04-11 06:46:25INFO__-->
+
 </div>
     </div>
 </footer>
 <!--650-->
 
 <!-- assets.bottom -->
-<script src="site.min.js@1523354661" type="text/javascript" ></script>
 <script type="text/javascript" >/*<![CDATA[*/
 $ite.start({"sid":1364914,"vid":1371124,"aid":1621140,"cp":15,"active":"0","domain":"faraton.com.ua","lang":"ru","trusted":true,"debug":false});
 /*]]>*/</script>
 <!-- /assets.bottom -->
-
+<?php wp_footer(); ?>
 </body>
 </html>

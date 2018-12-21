@@ -66,7 +66,7 @@ widgets.addOnloadEvent(function() {
 	<div class="site-wrap-in">
         <header class="site-header contaner clear-self">
             <div class="left-part">
-            	<div class="logo" style="margin-top: -50px;margin-bottom: -70px;"><a href="index.html"><img src="1_primary_logo_on_transparent_256.png" alt="Faraton"></a></div>
+            	<div class="logo" style="margin-top: -50px;margin-bottom: -70px;"><a href="home"><img src="1_primary_logo_on_transparent_256.png" alt="Faraton"></a></div>
     	        <a class="site-logo" href="index.html"></a>
 	                        </div>
             <div class="phone-top"><div><span style="font-size: 11pt;">Тел.</span></div>
@@ -78,8 +78,8 @@ widgets.addOnloadEvent(function() {
                         <a href="oplata-i-dostavka.html" class="jblock">
                             <span class="jblock-image">
                             	<span>
-                                	<img class="normal" src="1.png" alt="Доставка&lt;span&gt;Оплата&lt;/span&gt;" />
-                                	<img class="hover" src="1-h.png" alt="Доставка&lt;span&gt;Оплата&lt;/span&gt;" />
+                                	<img class="normal" src="<?php bloginfo('template_directory') ?>/1.png" alt="Доставка&lt;span&gt;Оплата&lt;/span&gt;" />
+                                	<img class="hover" src="<?php bloginfo('template_directory') ?>/1-h.png" alt="Доставка&lt;span&gt;Оплата&lt;/span&gt;" />
                                 </span>
                             </span>
                             <span class="jblock-title">Доставка<span>Оплата</span></span>
@@ -89,8 +89,8 @@ widgets.addOnloadEvent(function() {
                         <a href="uslugi.html" class="jblock">
                             <span class="jblock-image">
                             	<span>
-                                	<img class="normal" src="2.png" alt="УСЛУГИ" />
-                                	<img class="hover" src="2-h.png" alt="УСЛУГИ" />
+                                	<img class="normal" src="<?php bloginfo('template_directory') ?>/2.png" alt="УСЛУГИ" />
+                                	<img class="hover" src="<?php bloginfo('template_directory') ?>/2-h.png" alt="УСЛУГИ" />
                                 </span>
                             </span>
                             <span class="jblock-title">УСЛУГИ</span>
@@ -100,8 +100,8 @@ widgets.addOnloadEvent(function() {
                         <a href="napishite-nam.html" class="jblock">
                             <span class="jblock-image">
                             	<span>
-                                	<img class="normal" src="3.png" alt="Заявка &lt;span&gt;офлайн&lt;/span&gt;" />
-                                	<img class="hover" src="3-h.png" alt="Заявка &lt;span&gt;офлайн&lt;/span&gt;" />
+                                	<img class="normal" src="<?php bloginfo('template_directory') ?>/3.png" alt="Заявка &lt;span&gt;офлайн&lt;/span&gt;" />
+                                	<img class="hover" src="<?php bloginfo('template_directory') ?>/3-h.png" alt="Заявка &lt;span&gt;офлайн&lt;/span&gt;" />
                                 </span>
                             </span>
                             <span class="jblock-title">Заявка <span>офлайн</span></span>
@@ -113,12 +113,21 @@ widgets.addOnloadEvent(function() {
         <div class="top-wrap ">
         	<div class="top-wrap-in contaner">
             	<nav class="menu-top-wrap clear-self">
-                    <ul class="menu-top menu-default">
+                    <?php wp_nav_menu( array(
+                            'theme_location'  => 'Primary',
+                            'container'       => null,
+                            'menu_class'      => 'menu-top menu-default',
+                            'echo'            => true,
+                            'items_wrap'      => '<ul class = "%2$s">%3$s</ul>',
+                            'depth'           => 1,
+                        ) );
+                        ?>
+                 <!--    <ul class="menu-top menu-default">
                         							<li ><a  href="tsvetnoy-metalloprokat-1.html">Цветной металлопрокат</a></li>
 													<li ><a  href="nerzhaveyushchiy-metalloprokat-1.html">Нержавеющий металлопрокат</a></li>
 													<li ><a  href="chernyy-metalloprokat-1.html">Черный металлопрокат</a></li>
 													<li ><a  href="eng.html">Инженерные системы</a></li>
 													<li ><a  href="about.html">О компании</a></li>
 													<li ><a  href="kontakty.html">Контакты</a></li>
-						                    </ul>
+						                    </ul> -->
                 </nav>

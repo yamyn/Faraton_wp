@@ -1,0 +1,7 @@
+.jblock-wrap11 ul li {
+  margin: 0 28px 47px 0; }
+
+.jblock-wrap11 ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start; }

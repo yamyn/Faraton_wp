@@ -74,8 +74,8 @@ if ( ! function_exists( 'faraton_com_ua_setup' ) ) :
 		 * @link https://codex.wordpress.org/Theme_Logo
 		 */
 		add_theme_support( 'custom-logo', array(
-			'height'      => 250,
-			'width'       => 250,
+			'height'      => 165,
+			'width'       => 200,
 			'flex-width'  => true,
 			'flex-height' => true,
 		) );
@@ -182,7 +182,7 @@ function faraton_com_ua_scripts() {
 	wp_register_script( 'site-min', get_template_directory_uri() . ( '/site.min.js@1523354661' ));
 	wp_enqueue_script( 'site-min' );
 
-	
+
 }
 add_action( 'wp_enqueue_scripts', 'faraton_com_ua_scripts' );
 

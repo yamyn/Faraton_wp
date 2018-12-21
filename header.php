@@ -66,8 +66,9 @@ widgets.addOnloadEvent(function() {
 	<div class="site-wrap-in">
         <header class="site-header contaner clear-self">
             <div class="left-part">
-            	<div class="logo" style="margin-top: -50px;margin-bottom: -70px;"><a href="home"><img src="1_primary_logo_on_transparent_256.png" alt="Faraton"></a></div>
-    	        <a class="site-logo" href="index.html"></a>
+            	<div class="logo" style="margin-top: -50px;margin-bottom: -70px;"><?php the_custom_logo( $blog_id ); ?>
+                    
+                </div>
 	                        </div>
             <div class="phone-top"><div><span style="font-size: 11pt;">Тел.</span></div>
 <p><span style="font-size: 11pt;">+38 (067) 487-49-19</span></p>

@@ -111,7 +111,11 @@ widgets.addOnloadEvent(function() {
                                     </ul>
             </div>
                     </header>
-        <div class="top-wrap ">
+        <div class="top-wrap <?php 
+                if ( is_front_page() ) {
+                 echo 'wrap-home';
+                    }
+                ?>"> 
         	<div class="top-wrap-in contaner">
             	<nav class="menu-top-wrap clear-self">
                     <?php wp_nav_menu( array(
@@ -132,3 +136,4 @@ widgets.addOnloadEvent(function() {
 													<li ><a  href="kontakty.html">Контакты</a></li>
 						                    </ul> -->
                 </nav>
+                

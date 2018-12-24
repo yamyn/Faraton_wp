@@ -9,10 +9,14 @@
 
 get_header();
 ?>
-
+		</div>
+</div>
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main">
-
+			<div class="site-content-wrap site-content-wrap2 contaner clear-self">
+				<div class="site-content">
+					<?php get_sidebar(); ?>
+					<div class="site-content-middle">
 		<?php
 		while ( have_posts() ) :
 			the_post();
@@ -21,17 +25,14 @@ get_header();
 
 			the_post_navigation();
 
-			// If comments are open or we have at least one comment, load up the comment template.
-			if ( comments_open() || get_comments_number() ) :
-				comments_template();
-			endif;
 
 		endwhile; // End of the loop.
 		?>
-
+					</div>
+				</div>
+			</div>
 		</main><!-- #main -->
 	</div><!-- #primary -->
 
 <?php
-get_sidebar();
 get_footer();

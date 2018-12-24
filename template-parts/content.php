@@ -8,7 +8,10 @@
  */
 
 ?>
-
+<div class="site-content-wrap site-content-wrap2 contaner clear-self">
+				<div class="site-content">
+					<?php get_sidebar(); ?>
+					<div class="site-content-middle">
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<header class="entry-header">
 		<?php
@@ -57,3 +60,6 @@
 		<?php faraton_com_ua_entry_footer(); ?>
 	</footer><!-- .entry-footer -->
 </article><!-- #post-<?php the_ID(); ?> -->
+</div>
+</div>
+</div>

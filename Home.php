@@ -9,7 +9,7 @@ Template Name: Главная
                 	<div class="top-block-title">Широкий ассортимент металлопроката</div>
                     <div class="top-block-text"><p>Крупнейший поставщик металлопроката<br />Выпускаем ежегодно более 150 000 тонн металлопроката</p></div>
                     <div class="top-block-more">
-                    	<a href="napishite-nam.html">Отправить заявку</a>
+                    	<a href="http://expiriencepress/%d0%b7%d0%b2%d0%be%d1%80%d0%be%d1%82%d0%bd%d1%96%d0%b9-%d0%b7%d0%b2%d1%8f%d0%b7%d0%be%d0%ba/">Отправить заявку</a>
                     </div>
                 </div>
                             </div>
@@ -149,7 +149,7 @@ Template Name: Главная
                         <div class="edit-block-in">
             	<div class="edit-block-title">Акция</div>
                 <div class="edit-block-text"><h6>На даный момент акционных предложений нет.</h6></div>
-                <a href="akcii.html" class="edit-block-more">Подробнее...</a>            </div>
+                <a href="http://expiriencepress/%D0%B0%D0%BA%D1%86%D0%B8%D0%B8/" class="edit-block-more">Подробнее...</a>            </div>
         </div>
                     </div>
 <?php get_footer(); ?>

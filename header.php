@@ -15,7 +15,7 @@
 <meta name="description" content="Фаратон, лист, трубы, круг, металлопрокат, прокат металла, сталь, металл, полоса, нержавеющие отводы, уголок, шестигранник, арматура, фольга, катанка, металлоконструкции">
 <meta name="keywords" content="Фаратон, лист, трубы, круг, металлопрокат, прокат металла, сталь, металл, полоса, нержавеющие отводы, уголок, шестигранник, арматура, фольга, катанка, металлоконструкции">
 <meta name="SKYPE_TOOLBAR" content="SKYPE_TOOLBAR_PARSER_COMPATIBLE" />
-<title>Фаратон - оптовая и розничная продажа металлопроката и металлоконструкций в Украине и Киеве.</title>
+<title><?php echo wp_get_document_title(); ?></title>
 
 <!--[if IE 6]>
 <link rel='stylesheet' type='text/css' href='/shared/highslide-4.1.13/highslide-ie6.css'/>
@@ -76,7 +76,7 @@ widgets.addOnloadEvent(function() {
 <p><span style="font-size: 11pt;">+38 (044) 585-25-70</span></p></div>                        <div class="jblock-wrap">
                 <ul class="menu-default" style="margin-right: 35px;">
                                         <li>
-                        <a href="oplata-i-dostavka.html" class="jblock">
+                        <a href="http://expiriencepress/%D0%BE%D0%BF%D0%BB%D0%B0%D1%82%D0%B0-%D0%B8-%D0%B4%D0%BE%D1%81%D1%82%D0%B0%D0%B2%D0%BA%D0%B0/" class="jblock">
                             <span class="jblock-image">
                             	<span>
                                 	<img class="normal" src="<?php bloginfo('template_directory') ?>/1.png" alt="Доставка&lt;span&gt;Оплата&lt;/span&gt;" />
@@ -87,7 +87,7 @@ widgets.addOnloadEvent(function() {
                         </a>
                     </li>
                                         <li>
-                        <a href="uslugi.html" class="jblock">
+                        <a href="http://expiriencepress/%D1%83%D1%81%D0%BB%D1%83%D0%B3%D0%B8/" class="jblock">
                             <span class="jblock-image">
                             	<span>
                                 	<img class="normal" src="<?php bloginfo('template_directory') ?>/2.png" alt="УСЛУГИ" />
@@ -98,7 +98,7 @@ widgets.addOnloadEvent(function() {
                         </a>
                     </li>
                                         <li>
-                        <a href="napishite-nam.html" class="jblock">
+                        <a href="http://expiriencepress/%d0%b7%d0%b2%d0%be%d1%80%d0%be%d1%82%d0%bd%d1%96%d0%b9-%d0%b7%d0%b2%d1%8f%d0%b7%d0%be%d0%ba/" class="jblock">
                             <span class="jblock-image">
                             	<span>
                                 	<img class="normal" src="<?php bloginfo('template_directory') ?>/3.png" alt="Заявка &lt;span&gt;офлайн&lt;/span&gt;" />

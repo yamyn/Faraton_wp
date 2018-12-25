@@ -9,10 +9,14 @@
 
 get_header();
 ?>
-
+					</div>
+			</div>
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main">
-
+			<div class="site-content-wrap site-content-wrap2 contaner clear-self">
+				<div class="site-content">
+					<?php get_sidebar(); ?>
+					<div class="site-content-middle">
 			<section class="error-404 not-found">
 				<header class="page-header">
 					<h1 class="page-title"><?php esc_html_e( 'Oops! That page can&rsquo;t be found.', 'faraton-com-ua' ); ?></h1>
@@ -42,17 +46,14 @@ get_header();
 						</ul>
 					</div><!-- .widget -->
 
-					<?php
-					/* translators: %1$s: smiley */
-					$faraton_com_ua_archive_content = '<p>' . sprintf( esc_html__( 'Try looking in the monthly archives. %1$s', 'faraton-com-ua' ), convert_smilies( ':)' ) ) . '</p>';
-					the_widget( 'WP_Widget_Archives', 'dropdown=1', "after_title=</h2>$faraton_com_ua_archive_content" );
-
-					the_widget( 'WP_Widget_Tag_Cloud' );
-					?>
+					
 
 				</div><!-- .page-content -->
 			</section><!-- .error-404 -->
-
+		
+				</div>
+			</div>
+		</div>
 		</main><!-- #main -->
 	</div><!-- #primary -->
 

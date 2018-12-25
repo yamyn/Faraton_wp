@@ -9,10 +9,14 @@
 
 get_header();
 ?>
-
+				</div><!--.end for header.php-->
+			</div><!--.end for header.php-->
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main">
-
+			<div class="site-content-wrap site-content-wrap2 contaner clear-self">
+				<div class="site-content">
+					<?php get_sidebar(); ?>
+					<div class="site-content-middle">
 		<?php if ( have_posts() ) : ?>
 
 			<header class="page-header">
@@ -44,7 +48,9 @@ get_header();
 
 		endif;
 		?>
-
+					</div>
+				</div>
+			</div>	
 		</main><!-- #main -->
 	</div><!-- #primary -->
 

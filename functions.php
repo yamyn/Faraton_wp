@@ -269,11 +269,17 @@ function rename_posts_labels( $labels ){
 		'items_list'            => 'Список новостей',
 		'menu_name'             => 'Новости',
 		'name_admin_bar'        => 'Новость', // пункте "добавить"
+		'taxonomies'            => array(),
 	);
 
 	return (object) array_merge( (array) $labels, $new );
 }
 
+// add_filter('post_type_labels_post', 'filter_category');
+// function filter_category( label ){
+// 	'taxonomies'          => null,
+// 	return 'taxonomies';
+// }
 // create type - "Товар"
 add_action( 'init', 'register_post_types' );
 function register_post_types(){
@@ -310,7 +316,7 @@ function register_post_types(){
 		//'map_meta_cap'      => null, // Ставим true чтобы включить дефолтный обработчик специальных прав
 		'hierarchical'        => true,
 		'supports'            => array('title','editor'), // 'title','editor','author','thumbnail','excerpt','trackbacks','custom-fields','comments','revisions','page-attributes','post-formats'
-		'taxonomies'          => array(category),
+		'taxonomies'          => array(),
 		'has_archive'         => false,
 		'rewrite'             => true,
 		'query_var'           => true,

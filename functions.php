@@ -213,3 +213,63 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
 
+## rename «записи» like «новости»
+//$labels = apply_filters( "post_type_labels_{$post_type}", $labels );
+add_filter('post_type_labels_post', 'rename_posts_labels');
+function rename_posts_labels( $labels ){
+
+	/* оригинал
+		stdClass Object (
+			'name'                  => 'Записи',
+			'singular_name'         => 'Запись',
+			'add_new'               => 'Добавить новую',
+			'add_new_item'          => 'Добавить запись',
+			'edit_item'             => 'Редактировать запись',
+			'new_item'              => 'Новая запись',
+			'view_item'             => 'Просмотреть запись',
+			'search_items'          => 'Поиск записей',
+			'not_found'             => 'Записей не найдено.',
+			'not_found_in_trash'    => 'Записей в корзине не найдено.',
+			'parent_item_colon'     => '',
+			'all_items'             => 'Все записи',
+			'archives'              => 'Архивы записей',
+			'insert_into_item'      => 'Вставить в запись',
+			'uploaded_to_this_item' => 'Загруженные для этой записи',
+			'featured_image'        => 'Миниатюра записи',
+			'set_featured_image'    => 'Задать миниатюру',
+			'remove_featured_image' => 'Удалить миниатюру',
+			'use_featured_image'    => 'Использовать как миниатюру',
+			'filter_items_list'     => 'Фильтровать список записей',
+			'items_list_navigation' => 'Навигация по списку записей',
+			'items_list'            => 'Список записей',
+			'menu_name'             => 'Записи',
+			'name_admin_bar'        => 'Запись',
+		)
+	*/
+
+	$new = array(
+		'name'                  => 'Новости',
+		'singular_name'         => 'Новость',
+		'add_new'               => 'Добавить новость',
+		'add_new_item'          => 'Добавить новость',
+		'edit_item'             => 'Редактировать новость',
+		'new_item'              => 'Свежая новость',
+		'view_item'             => 'Просмотреть новость',
+		'search_items'          => 'Поиск новостей',
+		'not_found'             => 'Новостей не найдено.',
+		'not_found_in_trash'    => 'Новостей в корзине не найдено.',
+		'parent_item_colon'     => '',
+		'all_items'             => 'Все новости',
+		'archives'              => 'Архивы новостей',
+		'insert_into_item'      => 'Вставить в новость',
+		'uploaded_to_this_item' => 'Загруженные для этой новости',
+		'featured_image'        => 'Миниатюра новости',
+		'filter_items_list'     => 'Фильтровать список новостей',
+		'items_list_navigation' => 'Навигация по списку новостей',
+		'items_list'            => 'Список новостей',
+		'menu_name'             => 'Новости',
+		'name_admin_bar'        => 'Новость', // пункте "добавить"
+	);
+
+	return (object) array_merge( (array) $labels, $new );
+}

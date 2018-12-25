@@ -70,8 +70,9 @@ body {
 	margin: 0;
 }
 /*Custom article*/
-article {
-	outline: 2px solid #000!important;
+.article-custom {
+	border: 1px solid #eaeaea!important;
+	background: #f8f7f2!important;
 }
 /**
  * Correct the font size and margin on `h1` elements within `section` and
@@ -89,6 +90,9 @@ h1 {
 	padding: 0 0 0 45px !important;
 }
 .news-page {
+	margin: 0px;
+	padding-bottom: 25px;
+	border-bottom: 2px dashed rgba(0, 0, 0, 0.55);
 	text-align: center;
 }
 

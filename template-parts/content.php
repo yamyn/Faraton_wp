@@ -8,11 +8,8 @@
  */
 
 ?>
-<div class="site-content-wrap site-content-wrap2 contaner clear-self">
-				<div class="site-content">
-					<?php get_sidebar(); ?>
-					<div class="site-content-middle">
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?> class="article-custom">
+<div class="article-custom">
+<article id="post-<?php the_ID(); ?>" <?php post_class(); ?> >
 	<header class="entry-header">
 		<?php
 		if ( is_singular() ) :
@@ -27,7 +24,7 @@
 		<?php endif; ?>
 	</header><!-- .entry-header -->
 
-	<?php faraton_com_ua_post_thumbnail(); ?>
+
 
 	<div class="entry-content">
 		<?php
@@ -51,10 +48,8 @@
 		?>
 	</div><!-- .entry-content -->
 
-	<footer class="entry-footer">
+	<!-- <footer class="entry-footer">
 		<?php faraton_com_ua_entry_footer(); ?>
-	</footer><!-- .entry-footer -->
+	</footer><!-- .entry-footer --> 
 </article><!-- #post-<?php the_ID(); ?> -->
-</div>
-</div>
 </div>

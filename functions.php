@@ -278,7 +278,7 @@ function rename_posts_labels( $labels ){
 add_action( 'init', 'register_post_types' );
 function register_post_types(){
 	register_post_type('Goods', array(
-		'label'  => null,
+		'label'  => Товары,
 		'labels' => array(
 			'name'               => 'Товары', // основное название для типа записи
 			'singular_name'      => 'Товар', // название для одной записи этого типа
@@ -308,9 +308,9 @@ function register_post_types(){
 		//'capability_type'   => 'post',
 		//'capabilities'      => 'post', // массив дополнительных прав для этого типа записи
 		//'map_meta_cap'      => null, // Ставим true чтобы включить дефолтный обработчик специальных прав
-		'hierarchical'        => false,
+		'hierarchical'        => true,
 		'supports'            => array('title','editor'), // 'title','editor','author','thumbnail','excerpt','trackbacks','custom-fields','comments','revisions','page-attributes','post-formats'
-		'taxonomies'          => array(),
+		'taxonomies'          => array(category),
 		'has_archive'         => false,
 		'rewrite'             => true,
 		'query_var'           => true,

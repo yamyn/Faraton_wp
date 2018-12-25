@@ -13,18 +13,21 @@
  */
 get_header();
 ?>
+                     </div>
+            </div>
 
     <div id="primary" class="content-area">
         <main id="main" class="site-main">
-
+    <div class="site-content-wrap site-content-wrap2 contaner clear-self">
+                <div class="site-content">
+                    <?php get_sidebar(); ?>
+                    <div class="site-content-middle">
         <?php
         if ( have_posts() ) :
 
             if ( is_home() && ! is_front_page() ) :
                 ?>
-                <header>
-                    <h1 class="page-title screen-reader-text"><?php single_post_title(); ?></h1>
-                </header>
+              
                 <?php
             endif;
 
@@ -49,10 +52,11 @@ get_header();
 
         endif;
         ?>
-
+                    </div>
+                </div>
+            </div>
         </main><!-- #main -->
     </div><!-- #primary -->
 
 <?php
-get_sidebar();
 get_footer();

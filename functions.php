@@ -213,6 +213,7 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
 
+// Записи
 ## rename «записи» like «новости»
 //$labels = apply_filters( "post_type_labels_{$post_type}", $labels );
 add_filter('post_type_labels_post', 'rename_posts_labels');
@@ -246,7 +247,6 @@ function rename_posts_labels( $labels ){
 			'name_admin_bar'        => 'Запись',
 		)
 	*/
-
 	$new = array(
 		'name'                  => 'Новости',
 		'singular_name'         => 'Новость',
@@ -272,4 +272,47 @@ function rename_posts_labels( $labels ){
 	);
 
 	return (object) array_merge( (array) $labels, $new );
+}
+
+// create type - "Товар"
+add_action( 'init', 'register_post_types' );
+function register_post_types(){
+	register_post_type('Goods', array(
+		'label'  => null,
+		'labels' => array(
+			'name'               => 'Товары', // основное название для типа записи
+			'singular_name'      => 'Товар', // название для одной записи этого типа
+			'add_new'            => 'Добавить товар', // для добавления новой записи
+			'add_new_item'       => 'Добавление товаров', // заголовка у вновь создаваемой записи в админ-панели.
+			'edit_item'          => 'Редактирование товара', // для редактирования типа записи
+			'new_item'           => 'Новый товар', // текст новой записи
+			'view_item'          => 'Смотреть товар', // для просмотра записи этого типа.
+			'search_items'       => 'Искать товар в каталоге', // для поиска по этим типам записи
+			'not_found'          => 'Не найдено', // если в результате поиска ничего не было найдено
+			'not_found_in_trash' => 'Не найдено в каталоге', // если не было найдено в корзине
+			'parent_item_colon'  => '', // для родителей (у древовидных типов)
+			'menu_name'          => 'Товары', // название меню
+		),
+		'description'         => 'Товары которые реализует компания',
+		'public'              => true,
+		'publicly_queryable'  => true, // зависит от public
+		'exclude_from_search' => true, // зависит от public
+		'show_ui'             => true, // зависит от public
+		'show_in_menu'        => true, // показывать ли в меню адмнки
+		'show_in_admin_bar'   => true, // по умолчанию значение show_in_menu
+		'show_in_nav_menus'   => true, // зависит от public
+		'show_in_rest'        => true, // добавить в REST API. C WP 4.7
+		'rest_base'           => null, // $post_type. C WP 4.7
+		'menu_position'       => 4,
+		'menu_icon'           => 'dashicons-cart', 
+		//'capability_type'   => 'post',
+		//'capabilities'      => 'post', // массив дополнительных прав для этого типа записи
+		//'map_meta_cap'      => null, // Ставим true чтобы включить дефолтный обработчик специальных прав
+		'hierarchical'        => false,
+		'supports'            => array('title','editor'), // 'title','editor','author','thumbnail','excerpt','trackbacks','custom-fields','comments','revisions','page-attributes','post-formats'
+		'taxonomies'          => array(),
+		'has_archive'         => false,
+		'rewrite'             => true,
+		'query_var'           => true,
+	) );
 }

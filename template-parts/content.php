@@ -12,7 +12,7 @@
 				<div class="site-content">
 					<?php get_sidebar(); ?>
 					<div class="site-content-middle">
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+<article id="post-<?php the_ID(); ?>" <?php post_class(); ?> class="article-custom">
 	<header class="entry-header">
 		<?php
 		if ( is_singular() ) :
@@ -23,12 +23,7 @@
 
 		if ( 'post' === get_post_type() ) :
 			?>
-			<div class="entry-meta">
-				<?php
-				faraton_com_ua_posted_on();
-				faraton_com_ua_posted_by();
-				?>
-			</div><!-- .entry-meta -->
+			
 		<?php endif; ?>
 	</header><!-- .entry-header -->
 
